@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       flash[:notice] = 'Contact was created successfully.'
-      redirect_to contact_path(@contact)
+      redirect_to contacts_path
     else
       render 'new'
     end
@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   def update
     if @contact.update(contact_params)
       flash[:notice] = 'Contact was updated successfully'
-      redirect_to @contact
+      redirect_to contacts_path
     else
       render 'edit'
     end
@@ -33,7 +33,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact.destroy
     flash[:notice] = 'Contact was deleted successfully.'
-    redirect_to contact_path(@contact)
+    redirect_to contacts_path
 
   end
 

@@ -1,7 +1,7 @@
 databases:
   - name: contact_management_app
     databaseName: contact_management_app_development
-    user: mysite
+    user: dng120696
     plan: free
 
 services:

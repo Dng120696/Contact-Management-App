@@ -1,6 +1,6 @@
 databases:
-  - name: mysite
-    databaseName: mysite
+  - name: contact_management_app
+    databaseName: contact_management_app_development
     user: mysite
     plan: free
 

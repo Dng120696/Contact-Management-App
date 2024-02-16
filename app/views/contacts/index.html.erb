@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag('index')%>
+
+<div>
+<h1 class = 'title'>Contact Management App</h1>
+<div class = 'table_container'>
+
+  <ul class = 'table_header'> 
+    <li>ID</li>
+    <li>Name</li>
+    <li>Email</li>
+    <li>Phone Number</li>
+    <li>Address</li>
+    <li>Action</li>
+  </ul>
+   <% @contacts.each do |contact| %>
+      <ul class = 'contact_list'>
+        <li> <%=contact.id%> </li>
+        <li> <%=contact.name%> </li>
+        <li> <%=contact.email%> </li>
+        <li> <%=contact.phone_number%> </li>
+        <li> <%=contact.address%> </li>
+        <div class = 'action_buttons'>
+          <li> <%= link_to 'Show', contact_path(contact), class:'btn_show'%></li>
+          <li ><%= link_to 'Edit', edit_contact_path(contact), class: 'btn_edit' %></li>
+          <li><%= link_to 'Delete', contact_path(contact),data: {turbo_confirm: "Are you sure?", turbo_method: :delete },class: 'btn_delete'%></li>
+        </div>
+      </ul>
+    <%end%>
+</div>
+<div class= 'btn_add'  >
+  <span class= 'btn_add_contact'>
+<%= link_to 'Add Contact',new_contact_path%>
+
+  </span>
+</div>
+
+</div>
+
+
+

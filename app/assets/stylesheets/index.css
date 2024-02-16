@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #309bd0 0%, #2442a2 100%);
+}
+.flash_message {
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  width: 30rem;
+  color: white;
+  text-align: center;
+  background-color: rgb(21, 167, 21);
+  font-weight: 500;
+  padding: 10px 1rem;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.flash_message button {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: lightgray;
+  cursor: pointer;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+.table_container,
+.btn_add {
+  max-width: clamp(300px, 90%, 1300px);
+}
+.table_container {
+  margin: 0 auto 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+.table_header {
+  padding: 5px 0;
+  background-color: lightslategray;
+  color: white;
+}
+.table_header > li {
+  padding-left: 1rem;
+}
+.table_header,
+.contact_list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  list-style-type: none;
+}
+.contact_list > li,
+.action_buttons {
+  border: 1px solid lightgrey;
+  padding: 5px 5px 5px 1rem;
+}
+.action_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding-right: 1rem;
+}
+.btn_add {
+  margin: auto;
+}
+.btn_add_contact,
+.action_buttons a {
+  padding: 5px 1rem;
+  background-color: rgb(214, 215, 217);
+  color: gray;
+  border-radius: 5px;
+}
+.btn_add_contact {
+  font-weight: bold;
+  padding: 8px 2rem;
+}
+.action_buttons a:hover,
+.btn_add_contact:hover {
+  cursor: pointer;
+  background-color: slategray;
+  color: white;
+}

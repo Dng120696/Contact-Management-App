@@ -1,0 +1,57 @@
+<section class = 'form_sec'>
+  <h1>Contact Form</h1>
+<div class="error_message">
+  <% if @contact.errors.any? %>
+    <h2>The following errors prevented the contact from being saved:</h2>
+    <ul>
+      <% @contact.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<%= form_with model: @contact,data:{turbo:false} do |f|%>
+  <p>
+    <span>
+    <%= f.label :name%>
+    </span>
+    <span>
+    <%= f.text_field :name, placeholder: 'Name'%>
+    </span>
+  </p>
+  <p>
+    <span>
+    <%= f.label :email%>
+    </span>
+    <span>
+    <%= f.text_field :email , placeholder: 'example@gmail.com'%>
+    </span>
+  </p>
+  <p>
+    <span>
+    <%= f.label :phone_number%>
+    </span>
+    <span>
+    <%= f.text_field :phone_number , placeholder: '09123456789'%>
+    </span>
+  </p>
+  <p>
+    <span>
+    <%= f.label :address%>
+    </span>
+    <span>
+    <%= f.text_field :address , placeholder: 'Address'%>
+    </span>
+  </p>
+  <p class = 'btn_contact_form'>
+    <span>
+    <%= f.submit %>
+    </span>
+    <span>
+      <%= link_to 'Cancel','/contacts'%>
+    </span>
+  </p>
+  
+<%end%>
+</section>

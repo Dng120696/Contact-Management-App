@@ -1,0 +1,7 @@
+
+<% if flash[:notice] %>
+  <div class = 'flash_message'>
+    <%= flash[:notice] %>
+  <button  onclick="this.parentElement.style.display='none';">×</button>
+  </div>
+<% end %>

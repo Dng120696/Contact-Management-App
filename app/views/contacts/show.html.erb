@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag('show')%>
+<div class = 'contact_info_container'>
+  <div class='contact_box'>
+    <h1>Contact Information</h1>
+    <p>
+      <span>Name:</span>
+      <span><%= @contact.name%></span>
+      </p>
+    <p>
+     <span>Email:</span>
+      <span><%= @contact.email%></span>
+      </p>
+    <p>
+      <span>Phone Number:</span>
+      <span><%= @contact.phone_number%></span>
+      </p>
+    <p>
+    <span>Address:</span>
+      <span><%= @contact.address%></span>
+      </p>
+    <p>
+      <span>Date Created:</span>
+      <span><%= @contact.created_at.strftime("%B %d, %Y")%></span>
+      </p>
+
+    <%= link_to 'Back to Contacts','/contacts',class:'btn_contact_info'%>
+  </div>
+
+</div>

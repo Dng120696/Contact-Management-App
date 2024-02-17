@@ -1,5 +1,5 @@
 <section class = 'form_sec'>
-  <h1>Contact Form</h1>
+  <h1 class = 'text-3xl text-center font-bold '>Contact Form</h1>
 <div class="error_message">
   <% if @contact.errors.any? %>
     <h2>The following errors prevented the contact from being saved:</h2>
@@ -52,6 +52,6 @@
       <%= link_to 'Cancel','/contacts'%>
     </span>
   </p>
-  
+
 <%end%>
 </section>

@@ -12,11 +12,11 @@
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
-.form_sec h1 {
+/* .form_sec h1 {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
-}
+} */
 .error_message {
   color: red;
   padding: 10px;

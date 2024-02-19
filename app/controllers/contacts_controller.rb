@@ -22,8 +22,14 @@ class ContactsController < ApplicationController
   end
 
   def update
+    old_contact_attributes = @contact.attributes
+
     if @contact.update(contact_params)
-      flash[:notice] = 'Contact was updated successfully'
+      if @contact.attributes != old_contact_attributes
+        flash[:notice] = 'Contact was updated successfully'
+      else
+        flash[:notice] = 'No changes were made.'
+      end
       redirect_to contacts_path
     else
       render 'edit'
